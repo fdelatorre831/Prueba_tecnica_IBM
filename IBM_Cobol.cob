@@ -314,10 +314,10 @@
        *> ------------------------------------------------
        *> Emitir reporte a SYSOUT
        *> (Promedio calculado al final => sin divisiones en línea
-       * El promedio se calcula sin realizar divisiones en línea,
-       * acumulando longitudes y cantidad de palabras.
-       * El criterio de redondeo no está definido por la consigna,
-       * por lo que se presenta el valor calculado sin redondeo adicional.)
+      * El promedio se calcula sin realizar divisiones en línea,
+      * acumulando longitudes y cantidad de palabras.
+      * El criterio de redondeo no está definido por la consigna,
+      * por lo que se presenta el valor calculado sin redondeo adicional.)
        *> ------------------------------------------------
        EMIT-REPORT.
            DISPLAY "==============================================="
@@ -412,4 +412,5 @@
            DISPLAY "Linea procesada: " WS-LINE-NUM
            MOVE 16 TO RETURN-CODE
            STOP RUN.
+
 
