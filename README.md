@@ -1,5 +1,5 @@
 # Prueba Técnica IBM
-
+Francisco de la Torre, fran.delatorre01@gmail.com
 ## Descripción general
 
 Este repositorio contiene la resolución de una prueba técnica que abarca distintos perfiles técnicos. El objetivo principal del trabajo es demostrar capacidad de análisis, toma de decisiones ante ambigüedades, validación estricta de datos y explicación clara de las soluciones implementadas.
