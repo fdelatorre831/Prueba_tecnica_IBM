@@ -1,26 +1,38 @@
 # Prueba Técnica IBM – Consulting Students
 
-Francisco de la Torre  
-Email: fran.delatorre01@gmail.com
+**Nombre:** Francisco de la Torre  
+**Email:** fran.delatorre01@gmail.com  
 
 ---
 
-## 1. Descripción general
+## Introducción
 
-Este repositorio contiene la resolución de la prueba técnica propuesta por IBM para el proceso de selección “Consulting Students”.
+Este repositorio contiene la resolución de la prueba técnica propuesta por IBM para el proceso **Consulting Students**.
 
-La entrega cubre múltiples perfiles técnicos (SQL, Automatización / Documentación funcional y COBOL) y prioriza:
+La prueba evalúa distintos perfiles técnicos y pone el foco en:
 
-- Capacidad de análisis frente a consignas ambiguas
-- Validaciones estrictas y decisiones justificadas
-- Claridad conceptual y técnica
-- Separación entre solución técnica y explicación funcional
+- Capacidad de análisis ante consignas ambiguas o incompletas  
+- Validación estricta de datos  
+- Justificación explícita de decisiones técnicas  
+- Claridad en la documentación y en la estructura del repositorio  
 
-No se trata de un proyecto productivo, sino de una **demostración de criterio técnico y razonamiento**.
+La solución presentada no busca ser un producto final, sino una **demostración de criterio técnico, razonamiento y buenas prácticas**, siguiendo el espíritu del enunciado.
 
 ---
 
-## 2. Estructura del repositorio
+## Alcance de la entrega
+
+En este repositorio se incluyen resoluciones correspondientes a los siguientes perfiles:
+
+- SQL  
+- Automatización / Documentación funcional  
+- COBOL  
+
+Cada ejercicio se entrega de forma independiente y puede ser evaluado por separado.
+
+---
+
+## Estructura del repositorio
 
 ```
 ├── README.md
@@ -35,50 +47,54 @@ No se trata de un proyecto productivo, sino de una **demostración de criterio t
 
 ```
 
-## 3. Contenido por ejercicio
+La estructura separa los entregables por dominio técnico para facilitar la lectura, revisión y defensa técnica.
 
-### 3.1 SQL – Consultas
+---
 
-**Ruta:** `sql/consultas.sql`
+## Descripción de los entregables
 
-Incluye la resolución de los ejercicios SQL solicitados en el enunciado.
+### SQL
+
+**Archivo:** `sql/Prueba_tecnica_IBM_Consultas_SQL.sql`
+
+Contiene la resolución de los ejercicios SQL solicitados en el enunciado.
+
+Características principales:
+
+- Uso de subconsultas y columnas calculadas  
+- Resolución explícita de ambigüedades (edad, beneficios, orden lógico)  
+- Justificación de decisiones directamente en el archivo  
+- No se devuelve únicamente la consulta, sino también el razonamiento  
+
+---
+
+### Documentación funcional – n8n
+
+**Archivo:** `docs/Ejercicio_3_n8n_documentacion.docx`
+
+Documento Word con documentación funcional y operativa del sistema **n8n**.
 
 Características:
-- Uso de subconsultas y filtros complejos
-- Columnas calculadas justificadas
-- Manejo explícito de ambigüedades (edad, beneficios, orden lógico)
-- Decisiones documentadas en el propio archivo SQL
 
-No se devuelve únicamente la consulta: se prioriza legibilidad y explicación.
-
----
-
-### 3.2 Documentación funcional – n8n
-
-**Ruta:** `docs/Ejercicio_3_n8n_documentacion.docx`
-
-Documento Word con documentación funcional y operativa del sistema n8n.
-
-Características clave:
-- No es traducción ni resumen del README oficial
-- Orientado a **usuario técnico-funcional**
+- Orientado a usuario técnico-funcional  
+- No es traducción ni resumen del README oficial  
 - Incluye:
-  - Conceptos fundamentales
-  - Patrones de uso reales
-  - Operación en producción
-  - Seguridad, observabilidad y escalado
-- Se justifica explícitamente:
-  - Rol del lector
-  - Nivel de profundidad
-  - Alcance y exclusiones
+  - Conceptos fundamentales  
+  - Patrones de uso reales  
+  - Operación en producción  
+  - Seguridad, observabilidad y escalado  
+- Se justifica:
+  - Rol del lector  
+  - Nivel de profundidad  
+  - Alcance y exclusiones  
 
-El documento fue estructurado con apoyo de IA, pero todas las decisiones de enfoque fueron definidas manualmente.
+El documento fue estructurado con apoyo de herramientas de IA, pero todas las decisiones de enfoque y contenido fueron definidas manualmente.
 
 ---
 
-### 3.3 COBOL – Programa batch
+### COBOL – Programa batch
 
-**Ruta:** `cobol/IBM_Cobol.cob`
+**Archivo:** `cobol/IBM_Cobol.cob`
 
 Programa batch desarrollado en COBOL que procesa archivos secuenciales y genera un reporte por idioma.
 
@@ -90,27 +106,28 @@ Programa batch desarrollado en COBOL que procesa archivos secuenciales y genera 
 - `idiomas.dat`  
   Formato: `<idioma>|<descripcion>`
 
-El orden de los archivos no se asume.
+No se asume orden de los archivos.
 
 #### Reglas implementadas
 
-- Validación estricta de formato
-- Carga completa de `idiomas.dat` en memoria
-- Finalización inmediata ante el primer error
-- Cálculo de promedios sin divisiones en línea
-- Normalización del parámetro de entrada (A–Z)
+- Validación estricta de formato  
+- Carga completa de `idiomas.dat` en memoria  
+- Finalización inmediata ante el primer error  
+- Cálculo de promedios sin divisiones en línea  
+- Normalización del parámetro de entrada (A–Z)  
 
 ---
 
-## 4. Ejecución del programa COBOL
+## Ejecución del programa COBOL
 
 ### Requisitos
 
-- Compilador COBOL (ej. GnuCOBOL)
-- Entorno batch
-- Archivos de entrada disponibles
+- Compilador COBOL (por ejemplo, GnuCOBOL)  
+- Entorno de ejecución batch  
+- Archivos de entrada disponibles  
 
 ### Compilación
+
 ```
 cobc -x IBM_Cobol.cob
 ```
@@ -124,19 +141,18 @@ La letra puede ingresarse en minúscula o mayúscula.
 
 ### Salida
 
-- Reporte por salida estándar
-- Ante error:
-  - Mensaje descriptivo
-  - Línea afectada
-  - Terminación inmediata del proceso
+- El reporte se muestra por salida estándar  
+- Ante el primer error:
+  - Se informa el error  
+  - Se indica la línea afectada  
+  - El programa finaliza inmediatamente  
 
 ---
 
-## 5. Consideraciones de diseño
+## Consideraciones generales
 
-- No se asumen comportamientos no definidos en el enunciado
-- Las ambigüedades se resuelven de forma explícita y justificada
-- Se prioriza corrección, claridad y trazabilidad
-- El diseño facilita extensión a ejercicios opcionales (containerización, despliegue, testing)
-
+- No se asumen comportamientos no definidos en el enunciado  
+- Las ambigüedades se resuelven de forma explícita y justificada  
+- Se prioriza claridad, corrección y trazabilidad  
+- La estructura facilita la extensión a ejercicios opcionales  
 ---
