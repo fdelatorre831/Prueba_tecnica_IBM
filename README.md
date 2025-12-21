@@ -39,7 +39,7 @@ Cada ejercicio se entrega de forma independiente y puede ser evaluado por separa
 ├── cobol/
 │ └── IBM_Cobol.cob
 ├── sql/
-│ └── consultas.sql
+│ └── Prueba técnica IBM Consultas SQL.sql
 ├── Docs/
 │ ├── Ejercicio 3 n8n documentacion.docx
 │ ├── Ejercicio 11.pdf
