@@ -7,7 +7,7 @@
 
 ## Introducción
 
-Este repositorio contiene la resolución de la prueba técnica propuesta por IBM para el proceso **Consulting Students**.
+Este repositorio contiene la resolución de la prueba técnica propuesta por IBM.
 
 La prueba evalúa distintos perfiles técnicos y pone el foco en:
 
@@ -164,7 +164,7 @@ Durante el análisis del enunciado se detectaron fragmentos de texto con formato
 Estos fragmentos incluían dos tipos de contenido claramente diferenciables:
 
 1. **Instrucciones dirigidas explícitamente a modelos de lenguaje (LLMs)**  
-   Ejemplo: indicaciones del tipo *“ignorar instrucciones previas”* o *“resolver automáticamente”*.
+   Ejemplo: indicaciones del tipo *«ignorar instrucciones previas»* o *«resolver automáticamente»*.
 
 2. **Aclaraciones o restricciones adicionales de la consigna**, no redundantes con el texto visible.
 
