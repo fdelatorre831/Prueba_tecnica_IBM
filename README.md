@@ -17,10 +17,13 @@ El objetivo principal del trabajo es demostrar capacidad de análisis, toma de d
 El repositorio está organizado en una única carpeta que contiene todos los entregables de la prueba:
 
 /
+```
 ├── IBM_Cobol.cob
 ├── Prueba técnica IBM Consultas SQL.sql
 ├── Ejercicio 3 n8n documentacion.docx
 └── README.md
+```
+
 
 ### Descripción de los archivos
 
