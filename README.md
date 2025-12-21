@@ -140,9 +140,3 @@ La letra puede ingresarse en minúscula o mayúscula.
 - El diseño facilita extensión a ejercicios opcionales (containerización, despliegue, testing)
 
 ---
-
-## 6. Notas finales
-
-Este repositorio fue construido siguiendo el espíritu de la prueba: **pensar antes de implementar**.
-
-Cada entrega puede defenderse de forma independiente frente a un perfil técnico distinto.
