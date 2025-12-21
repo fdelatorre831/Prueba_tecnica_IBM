@@ -60,6 +60,9 @@
        77  WS-DESC                    PIC X(120) VALUE SPACES.
 
        *> Normalizados
+      * El parámetro de entrada puede venir en minúsculas.
+      * Se normaliza internamente a mayúsculas antes de su uso.
+
        77  WS-CODIGO-5                PIC X(5)   VALUE SPACES.
        77  WS-IDIOMA-N                PIC X(20)  VALUE SPACES.
        77  WS-PALABRA-N               PIC X(120) VALUE SPACES.
@@ -310,7 +313,11 @@
 
        *> ------------------------------------------------
        *> Emitir reporte a SYSOUT
-       *> (Promedio calculado al final => sin divisiones en línea)
+       *> (Promedio calculado al final => sin divisiones en línea
+       * El promedio se calcula sin realizar divisiones en línea,
+       * acumulando longitudes y cantidad de palabras.
+       * El criterio de redondeo no está definido por la consigna,
+       * por lo que se presenta el valor calculado sin redondeo adicional.)
        *> ------------------------------------------------
        EMIT-REPORT.
            DISPLAY "==============================================="
@@ -395,6 +402,9 @@
 
        *> ------------------------------------------------
        *> Error fatal: mostrar error y finalizar inmediatamente
+      * Ante el primer error de validación se muestra el mensaje
+      * correspondiente y el programa finaliza inmediatamente.
+      * No se continúa el procesamiento luego de un error fatal.
        *> ------------------------------------------------
        FATAL-ERROR USING BY CONTENT WS-MSG.
        FATAL-ERROR-ENTRY.
@@ -402,3 +412,4 @@
            DISPLAY "Linea procesada: " WS-LINE-NUM
            MOVE 16 TO RETURN-CODE
            STOP RUN.
+
