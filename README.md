@@ -53,11 +53,11 @@ El repositorio está organizado en una única carpeta que contiene todos los ent
   * idiomas.dat
 
 ### Formato de los archivos de entrada
-
+```
 idiomas.dat <idioma>|<descripcion>
 
 palabras.dat <codigo>|<palabra>|<idioma>
-
+```
 ### Compilación
 
 Ejemplo utilizando GnuCOBOL:
