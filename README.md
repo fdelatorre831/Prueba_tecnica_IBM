@@ -54,15 +54,15 @@ palabras.dat <codigo>|<palabra>|<idioma>
 ### Compilación
 
 Ejemplo utilizando GnuCOBOL:
-
+```
 cobc -x IBM_Cobol.cob
-
+```
 ### Ejecución
 
 El programa recibe como parámetro una letra alfabética entre «A» y «Z»:
-
+```
 ./IBM_Cobol A
-
+```
 La letra puede pasarse en minúscula; el programa la normaliza internamente.
 
 ### Salida
