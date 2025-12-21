@@ -2,13 +2,7 @@
 
 ## Descripción general
 
-Este repositorio contiene la resolución de una prueba técnica que abarca distintos perfiles técnicos, incluyendo:
-
-* Consultas SQL con reglas de negocio explícitas
-* Un programa batch en COBOL que procesa múltiples archivos secuenciales
-* Documentación funcional de un sistema externo («n8n»)
-
-El objetivo principal del trabajo es demostrar capacidad de análisis, toma de decisiones ante ambigüedades, validación estricta de datos y explicación clara de las soluciones implementadas.
+Este repositorio contiene la resolución de una prueba técnica que abarca distintos perfiles técnicos. El objetivo principal del trabajo es demostrar capacidad de análisis, toma de decisiones ante ambigüedades, validación estricta de datos y explicación clara de las soluciones implementadas.
 
 ---
 
