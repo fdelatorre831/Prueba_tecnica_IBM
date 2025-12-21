@@ -6,7 +6,7 @@ Este repositorio contiene la resolución de una prueba técnica que abarca disti
 
 ---
 
-## Estructura del repositorio
+## 📁 Estructura del repositorio
 
 El repositorio está organizado en una única carpeta que contiene todos los entregables de la prueba:
 
@@ -18,7 +18,7 @@ El repositorio está organizado en una única carpeta que contiene todos los ent
 ```
 
 
-### Descripción de los archivos
+### 📌 Descripción de los archivos
 
 * **IBM_Cobol.cob**
   Programa batch desarrollado en COBOL. Procesa los archivos de entrada, aplica validaciones estrictas y genera un reporte por idioma.
@@ -34,7 +34,7 @@ El repositorio está organizado en una única carpeta que contiene todos los ent
 
 ---
 
-## Ejecución del programa COBOL
+## 🚀 Cómo ejecutar el programa COBOL
 
 ### Requisitos
 
@@ -76,7 +76,7 @@ La letra puede pasarse en minúscula; el programa la normaliza internamente.
 
 ---
 
-## Consideraciones de diseño
+## 💡 Consideraciones de diseño
 
 * Todas las validaciones solicitadas en el enunciado son estrictas.
 * No se continúa el procesamiento luego de un error fatal.
@@ -85,6 +85,6 @@ La letra puede pasarse en minúscula; el programa la normaliza internamente.
 
 ---
 
-## Notas finales
+## 📄 Notas finales
 
 Este repositorio no está pensado como un proyecto productivo completo, sino como una demostración de criterios técnicos, capacidad de análisis y claridad explicativa, tal como se solicita en la prueba técnica.
