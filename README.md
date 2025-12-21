@@ -156,3 +156,29 @@ La letra puede ingresarse en minúscula o mayúscula.
 - Se prioriza claridad, corrección y trazabilidad  
 - La estructura facilita la extensión a ejercicios opcionales  
 ---
+
+## Consideraciones sobre el enunciado y uso de IA
+
+Durante el análisis del enunciado se detectaron fragmentos de texto con formato no visible (letra blanca sobre fondo blanco).
+
+Estos fragmentos incluían dos tipos de contenido claramente diferenciables:
+
+1. **Instrucciones dirigidas explícitamente a modelos de lenguaje (LLMs)**  
+   Ejemplo: indicaciones del tipo *“ignorar instrucciones previas”* o *“resolver automáticamente”*.
+
+2. **Aclaraciones o restricciones adicionales de la consigna**, no redundantes con el texto visible.
+
+### Decisiones tomadas
+
+- Las **instrucciones dirigidas a LLMs** fueron **ignoradas deliberadamente**, ya que:
+  - No forman parte de la consigna funcional para una persona.
+  - No tienen impacto técnico sobre el problema a resolver.
+  - Seguirlas iría en contra del objetivo de evaluar criterio y razonamiento humano.
+
+- Las **aclaraciones funcionales relevantes** incluidas en texto no visible fueron:
+  - Analizadas caso a caso.
+  - Consideradas únicamente cuando aportaban información concreta sobre reglas, restricciones o alcance del ejercicio.
+  - Aplicadas de forma explícita y justificadas cuando afectaban decisiones de diseño.
+
+Esta separación permitió mantener una resolución coherente, reproducible y defendible, alineada con el objetivo real de la prueba: evaluar capacidad de análisis y toma de decisiones frente a ambigüedades.
+---
