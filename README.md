@@ -180,5 +180,5 @@ Estos fragmentos incluían dos tipos de contenido claramente diferenciables:
   - Consideradas únicamente cuando aportaban información concreta sobre reglas, restricciones o alcance del ejercicio.
   - Aplicadas de forma explícita y justificadas cuando afectaban decisiones de diseño.
 
-Esta separación permitió mantener una resolución coherente, reproducible y defendible, alineada con el objetivo real de la prueba: evaluar capacidad de análisis y toma de decisiones frente a ambigüedades.
+  Esta separación permitió mantener una resolución coherente, reproducible y defendible, alineada con el objetivo real de la prueba: evaluar capacidad de análisis y toma de decisiones frente a ambigüedades.
 ---
