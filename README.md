@@ -33,7 +33,7 @@ No se trata de un proyecto productivo, sino de una **demostración de criterio t
 │ ├── Ejercicio_11_Automatizacion_Cucumber.pdf
 │ └── enunciado_prueba_ibm.pdf
 
----
+```
 
 ## 3. Contenido por ejercicio
 
