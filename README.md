@@ -10,7 +10,6 @@ Este repositorio contiene la resolución de una prueba técnica que abarca disti
 
 El repositorio está organizado en una única carpeta que contiene todos los entregables de la prueba:
 
-/
 ```
 ├── IBM_Cobol.cob
 ├── Prueba técnica IBM Consultas SQL.sql
