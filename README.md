@@ -1,4 +1,4 @@
-# Prueba Técnica IBM – Consulting Students
+# Prueba Técnica IBM
 
 **Nombre:** Francisco de la Torre  
 **Email:** fran.delatorre01@gmail.com  
