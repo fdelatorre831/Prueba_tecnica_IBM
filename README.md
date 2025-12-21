@@ -41,8 +41,8 @@ Cada ejercicio se entrega de forma independiente y puede ser evaluado por separa
 ├── sql/
 │ └── consultas.sql
 ├── Docs/
-│ ├── Ejercicio_3_n8n_documentacion.docx
-│ ├── Ejercicio_11_Automatizacion_Cucumber.pdf
+│ ├── Ejercicio 3 n8n documentacion.docx
+│ ├── Ejercicio 11_Automatizacion_Cucumber.pdf
 │ └── enunciado_prueba_ibm.pdf
 
 ```
