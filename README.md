@@ -115,30 +115,6 @@ El orden de los archivos no se asume.
 cobc -x IBM_Cobol.cob
 ```
 
-
-## 🚀 Cómo ejecutar el programa COBOL
-
-### Requisitos
-
-* Compilador COBOL (por ejemplo, GnuCOBOL)
-* Entorno de ejecución batch
-* Archivos de entrada:
-
-  * palabras.dat
-  * idiomas.dat
-
-### Formato de los archivos de entrada
-```
-idiomas.dat <idioma>|<descripcion>
-
-palabras.dat <codigo>|<palabra>|<idioma>
-```
-### Compilación
-
-Ejemplo utilizando GnuCOBOL:
-```
-cobc -x IBM_Cobol.cob
-```
 ### Ejecución
 ```
 ./IBM_Cobol A
