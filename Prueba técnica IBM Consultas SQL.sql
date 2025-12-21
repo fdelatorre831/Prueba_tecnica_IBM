@@ -1,35 +1,64 @@
 /*
 Ejercicio 1 —
 
-Cálculo de edad: años completos (truncado), porque es el estándar administrativo; evita “cumplimientos anticipados”.
+Supuestos y decisiones explícitas según consigna:
 
-Búsqueda de fragmentos en nombres: case-insensitive, porque no se define sensibilidad y es el comportamiento esperado.
+Campos no obligatorios:
+No se asume obligatoriedad de ningún campo.
+Se excluyen personas sin fecha_nacimiento, ya que no es posible calcular la edad
+de forma consistente.
+El ingreso_mensual NULL no permite clasificar el segmento socioeconómico;
+solo se considera como 'Vulnerable' si la persona recibe al menos un beneficio
+relevante. En caso contrario, el registro se excluye.
 
-Longitud de apellido (5–20): caracteres Unicode (no bytes), porque “caracter” es ambiguo; Unicode es semántico.
+Cálculo de edad:
+Se calcula en años completos (truncado), criterio administrativo estándar,
+evitando “cumplimientos anticipados”.
 
-Promedio de indice_desarrollo: dinámico al momento de ejecución; el enunciado dice que puede cambiar.
+Búsqueda de fragmentos en nombres:
+Se realiza de forma case-insensitive, ya que no se define sensibilidad
+y es el comportamiento esperado.
 
-Beneficios “relevantes”: solo los de últimos 5 años (ventana) “para los cálculos”; beneficios antiguos no invalidan a la persona porque no está definido y sería una suposición fuerte.
+Longitud de apellido (5–20):
+Se mide en caracteres Unicode (no bytes), porque el término “caracter”
+es ambiguo y Unicode representa la unidad semántica correcta.
 
-Exclusión desempleado + >1 beneficio: se evalúa después de computar el conteo de beneficios relevantes; antes no se puede decidir correctamente.
+Índice de desarrollo:
+El indice_desarrollo puede no estar normalizado.
+Se utiliza el promedio aritmético dinámico al momento de ejecución,
+ya que la consigna indica que puede cambiar y no define escalas alternativas.
 
-Orden de segmento_socioeconomico: no lexicográfico. Uso orden semántico: Vulnerable, Medio, Alto (gradiente de vulnerabilidad social y prioridad analítica).
+Beneficios “relevantes”:
+Se consideran únicamente los beneficios otorgados en los últimos 5 años
+para los cálculos.
+No se discrimina por tipo_beneficio, ya que no se definen criterios adicionales.
+Beneficios antiguos no invalidan a la persona, dado que asumirlo sería
+una suposición no indicada por la consigna.
 
-Esquema de pasos
+Exclusión desempleado + más de un beneficio:
+La exclusión se evalúa después de computar el conteo de beneficios relevantes,
+ya que antes no es posible decidir correctamente.
 
-Calcular promedio de indice_desarrollo en Localidades (subquery/CTE).
+Uniones entre tablas:
+Se utilizan LEFT JOIN hacia los agregados de beneficios para evitar excluir
+personas por ausencia de datos, respetando que los campos no son obligatorios.
+La relación Personas–Localidades se resuelve mediante JOIN explícito.
 
-Calcular beneficios relevantes (últimos 5 años) por persona: count(*) (subquery/CTE).
+Orden de segmento_socioeconomico:
+No es lexicográfico.
+Se utiliza un orden semántico: Vulnerable, Medio, Alto,
+siguiendo un gradiente de vulnerabilidad social y prioridad analítica.
 
-Unir Personas → Localidades (INNER JOIN) y Personas → agregados de beneficios (LEFT JOIN).
-
-Aplicar filtros: longitud apellido, fragmentos nombre, edad ≥ 25, departamento ≠ Capital, indice > promedio.
-
-Aplicar exclusión: desempleado AND beneficios_relevantes > 1.
-
-Calcular segmento_socioeconomico con CASE.
-
-Ordenar por orden semántico de segmento, edad DESC, apellido ASC.
+Esquema de pasos:
+1. Calcular el promedio de indice_desarrollo en Localidades (subquery/CTE).
+2. Calcular beneficios relevantes (últimos 5 años) por persona: count(*) (subquery/CTE).
+3. Unir Personas → Localidades y Personas → agregados de beneficios.
+4. Aplicar filtros: longitud de apellido, fragmentos de nombre, edad ≥ 25,
+   departamento ≠ Capital, indice_desarrollo > promedio.
+5. Aplicar exclusión: estado_laboral = 'Desempleado' AND beneficios_relevantes > 1.
+6. Calcular segmento_socioeconomico mediante CASE.
+7. Ordenar por segmento_socioeconomico (orden semántico),
+   edad DESC y apellido ASC.
 */
 
 
@@ -140,3 +169,4 @@ WHERE LENGTH(apellido_norm) >= 8
 GROUP BY apellido_norm
 HAVING COUNT(*) = 1
 ORDER BY apellido_norm ASC;
+
