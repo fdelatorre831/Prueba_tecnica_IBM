@@ -1,4 +1,4 @@
-# Prueba Técnica — Procesamiento Batch y Consultas
+# Prueba Técnica IBM
 
 ## Descripción general
 
