@@ -134,7 +134,24 @@ ORDER BY
   END,
   edad_anios DESC,
   p.apellidos ASC;
-  
+    /*
+  Alternativas de modelado del segmento socioeconómico
+
+Como alternativa al cálculo inline del segmento socioeconómico mediante una expresión CASE, podría modelarse la lógica de segmentación en una tabla de referencia configurable (por ejemplo, rangos de ingreso y reglas asociadas).
+Esto permitiría modificar criterios sin reescribir la consulta y facilitaría auditoría de cambios.
+
+No se adopta esta alternativa porque la consigna solicita explícitamente una columna calculada y no define un modelo persistente.
+
+Estrategia alternativa de cálculo de edad
+
+Otra opción sería calcular la edad utilizando diferencias exactas de fechas considerando día y mes.
+Se opta por años completos truncados por ser el criterio administrativo más habitual y menos ambiguo ante la falta de definición en la consigna.
+
+Optimización para grandes volúmenes
+
+En escenarios de gran volumen de datos, podrían evaluarse índices específicos o materialización previa de subconsultas (por ejemplo, beneficios relevantes por persona).
+Esto no se implementa ya que la consigna no evalúa performance, sino criterio lógico.
+  */
   
 /*
 Ejercicio 2
@@ -170,3 +187,16 @@ GROUP BY apellido_norm
 HAVING COUNT(*) = 1
 ORDER BY apellido_norm ASC;
 
+/*
+Normalización previa de apellidos
+
+Como alternativa, podría normalizarse el apellido (trim, lower-case, eliminación de caracteres especiales) antes de evaluar unicidad.
+Esta estrategia sería útil en bases de datos con baja calidad de datos.
+
+No se aplica porque introduciría reglas de normalización no definidas y alteraría el significado original del dato.
+
+Uso de collation explícita
+
+Otra alternativa sería definir explícitamente una collation case-insensitive en la comparación.
+Se descarta por depender del motor de base de datos y no estar definida en la consigna.
+*/
